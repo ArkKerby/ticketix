@@ -643,6 +643,8 @@ window.onclick = function(event) {
     }
 }
 
+// Movie Grid Functions - Now Showing uses same layout as Coming Soon
+
 // Test function to verify JavaScript is working
 function testFunction() {
     alert('JavaScript is working!');

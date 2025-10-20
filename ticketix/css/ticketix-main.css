@@ -110,17 +110,22 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Movie card styling */
+/* Section Header Styling - Now using standard h2 styling */
+
+/* Movie Grid Styling - Now Showing section uses same layout as Coming Soon */
+
+/* Original Movie Card Styling (for Coming Soon section) */
 .movie {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  transform: scale(1.05); /* Display at hover size by default */
 }
 
 .movie:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Keep same size on hover */
 }
 
 .movie img {
@@ -645,4 +650,6 @@ section h2 {
   #youtubePlayer {
     padding-bottom: 56.25%;
   }
+  
+  /* Movie Grid Responsive - Now Showing uses same responsive design as Coming Soon */
 }
