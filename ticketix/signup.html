@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Ticketix</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Montserrat', Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #00BFFF, #3C50B2);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #00BFFF;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3C50B2;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Create Your Ticketix Account</h2>
+  <form action ="signup.php" method="Post">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="date" name="birthday" placeholder="Birthday" required>
+    <input type="tel" name="contact" placeholder="Contact Number"pattern="[0-9]{11}" maxlength="11" required>
+    <button type="submit">Sign Up</button>
+    <a href="login.php">Already have an account? Login</a>
+    <a href="TICKETIX NI CLAIRE.php">Back to Home</a>
+  </form>
+</body>
+</html>

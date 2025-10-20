@@ -1,0 +1,648 @@
+/* Ticketix Main Styles */
+
+.welcome-text {
+  color: white;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced styling for sections */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* Contact section styling */
+#contact {
+  background: linear-gradient(to bottom, #00BFFF, #3C50B2);
+  margin: 40px 20px;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.contact-info p {
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.contact-form h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #3C50B2;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #00BFFF;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Movie card styling */
+.movie {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.movie:hover img {
+  filter: brightness(0.7);
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.movie:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.movie-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #00BFFF;
+}
+
+.movie-info p {
+  margin: 5px 0 20px 0;
+  font-size: 1em;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.action-btn {
+  background-color: #00BFFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.action-btn:hover {
+  background-color: #3C50B2;
+  transform: translateY(-2px);
+}
+
+.trailer-btn {
+  background-color: #FF6B35;
+}
+
+.trailer-btn:hover {
+  background-color: #E55A2B;
+}
+
+.ticket-btn {
+  background-color: #00BFFF;
+}
+
+.ticket-btn:hover {
+  background-color: #3C50B2;
+}
+
+.release-date {
+  color: #FFD700;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.notify-btn {
+  background-color: #3C50B2;
+}
+
+.notify-btn:hover {
+  background-color: #00BFFF;
+}
+
+/* Hero Carousel Styling */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide.active {
+  transform: translateX(0);
+}
+
+.hero-slide.prev {
+  transform: translateX(-100%);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+  pointer-events: auto;
+}
+
+.movie-logo {
+  max-width: 300px;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.5));
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .btn {
+  background-color: rgba(0, 191, 255, 0.8);
+  color: white;
+  border: 2px solid #00BFFF;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background-color: #00BFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #00BFFF;
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.booking-modal {
+  max-width: 500px;
+}
+
+.movie-detail-modal {
+  max-width: 800px;
+}
+
+.trailer-modal {
+  max-width: 900px;
+}
+
+.movie-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details h2 {
+  color: #00BFFF;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.movie-details p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.movie-description {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(0, 191, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #00BFFF;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 1.1em;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.close:hover {
+  color: #00BFFF;
+}
+
+/* Trailer Modal Specific Styles */
+.trailer-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.trailer-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.trailer-placeholder p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+#trailerContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#youtubePlayer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#trailerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Booking Form Styles */
+.booking-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #00BFFF;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group select:focus {
+  border-color: #00BFFF;
+  outline: none;
+}
+
+.price-display {
+  background: linear-gradient(to right, #00BFFF, #3C50B2);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.price-display p {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.book-now-btn {
+  width: 100%;
+  background: linear-gradient(to right, #00BFFF, #3C50B2);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+}
+
+.login-required {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.login-required p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.login-required .btn {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  
+  .movie-logo {
+    max-width: 250px;
+    max-height: 120px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+  
+  .movie-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .trailer-modal {
+    width: 95%;
+    margin: 2% auto;
+  }
+  
+  #youtubePlayer {
+    padding-bottom: 56.25%;
+  }
+}
